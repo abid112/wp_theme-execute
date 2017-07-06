@@ -78,7 +78,7 @@
         <div class="row">
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                    <!-- <img class="img-responsive img-rounded" src="holder.js/700x300" alt=""> -->
                 </a>
                 <h3>
                     <a href="#">Efficiently Unleash</a>
@@ -87,7 +87,7 @@
             </article>
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                    <!-- <img class="img-responsive img-rounded" src="holder.js/700x300" alt=""> -->
                 </a>
                 <h3>
                     <a href="#">Completely Synergize</a>
@@ -97,7 +97,7 @@
 
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">
+                    <!-- <img class="img-responsive img-rounded" src="holder.js/700x300" alt=""> -->
                 </a>
                 <h3>
                     <a href="#">Dynamically Procrastinate</a>
@@ -110,4 +110,4 @@
     </div>
     <!-- /.container -->
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
