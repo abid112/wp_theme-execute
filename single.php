@@ -52,26 +52,13 @@
     <!-- /.container -->
 </nav>
 
-<div class="jumbotron feature">
-    <div class="container">
-        <h1><span class="glyphicon glyphicon-equalizer"></span> <?php bloginfo('title'); ?></h1>
-        <p><?php bloginfo('description'); ?></p>
-        <p><a class="btn btn-default" href="#">Engage Now</a></p>
-    </div>
-</div>
+
 
 <!-- Content -->
 <div class="container">
 
     <!-- Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Superior Collaboration
-                <small>Visualize Quality</small>
-            </h1>
-            <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
-        </div>
-    </div>
+  
     <!-- /.row -->
 
     <!-- Feature Row -->
@@ -82,16 +69,16 @@
        <?php while(have_posts() ) : the_post();  ?> 
     <div class="row">
         
-        <article class="col-md-4 article-intro">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail();   ?>
-                
-            </a>
+        <article class="col-md-12 article-intro">
+            <div>
+                <?php the_post_thumbnail() ?>
+                <!-- <img class="img-responsive img-rounded" src="holder.js/700x300" alt=""> -->
+            </div>
             <h3>
-                <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
+                <p> <?php the_title(); ?></p>
                 <h6> published <?php the_time ('M-d-Y'); ?> <?php the_time(); ?> </h6>
             </h3>
-            <p> <?php the_excerpt(); ?></p>
+            <p> <?php the_content(); ?></p>
         </article>
         <?php endwhile; ?>
         
