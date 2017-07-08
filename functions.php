@@ -11,6 +11,20 @@ add_theme_support('post-thumbnails');
 
 
 
-set_post_thumbnail_size( 700, 300 ); 
+set_post_thumbnail_size( 700, 300 );
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'bddata',
+    array(
+      'labels' => array(
+        'name' => __( 'cpt1s' ),
+        'singular_name' => __( 'cpt1' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
 
 ?>

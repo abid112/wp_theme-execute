@@ -94,9 +94,12 @@
             <p> <?php the_excerpt(); ?></p>
         </article>
         <?php endwhile; ?>
+        <?php  ?>
         
     </div>
         
+    
+     
         
         
     
