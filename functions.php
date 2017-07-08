@@ -6,3 +6,11 @@ function execute_theme_style() {
   }
  
 add_action( 'wp_enqueue_scripts', 'execute_theme_style' );
+
+add_theme_support('post-thumbnails');
+
+
+
+set_post_thumbnail_size( 700, 300 ); 
+
+?>
