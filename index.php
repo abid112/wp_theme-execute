@@ -75,17 +75,18 @@
     <!-- /.row -->
 
     <!-- Feature Row -->
-    
-    
-    
-    
-       <?php while(have_posts() ) : the_post();  ?> 
+
+
+
+
+       <?php while(have_posts() ) : the_post();  ?>
     <div class="row">
-        
+
         <article class="col-md-4 article-intro">
+          
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail();   ?>
-                
+
             </a>
             <h3>
                 <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
@@ -95,18 +96,18 @@
         </article>
         <?php endwhile; ?>
         <?php  ?>
-        
+
     </div>
-        
-    
-     
-        
-        
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
     <!-- /.row -->
 
 </div>
