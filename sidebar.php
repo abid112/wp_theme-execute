@@ -20,7 +20,7 @@ Template Name: Sidebar
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-globe"></span> Logo</a>
+                <a class="navbar-brand" href="#"><span class="bangladesh"></span> Logo</a>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">

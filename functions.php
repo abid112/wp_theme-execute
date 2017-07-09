@@ -42,8 +42,8 @@ function mysidebar(){
 
 			'name'=>'Sidebar',
 			'id'=>'right_sidebar',
-			'before_widget'=>' <div class="col-md-4">',
-			'after_widget'=>'</div>',
+			'before_widget'=>' ',
+			'after_widget'=>'',
 			'before_title'=>'<h1>',
 			'after_title'=>'</h1>',
 			'description'=>'You can add Widget Here',
@@ -52,6 +52,57 @@ function mysidebar(){
 	}
 
 	add_action('widgets_init','mysidebar');
+
+
+  function footersidebar(){
+  		register_sidebar(array(
+
+  			'name'=>'Footer Widget 1',
+  			'id'=>'footer_sidebar1',
+  			'before_widget'=>' ',
+  			'after_widget'=>'',
+  			'before_title'=>'<h1>',
+  			'after_title'=>'</h1>',
+  			'description'=>'You can add Widget Here',
+  			));
+
+  	}
+
+  	add_action('widgets_init','footersidebar');
+
+
+    function footersidebar2(){
+        register_sidebar(array(
+
+          'name'=>'Footer Widget 2',
+          'id'=>'footer_sidebar2',
+          'before_widget'=>' ',
+          'after_widget'=>'',
+          'before_title'=>'<h1>',
+          'after_title'=>'</h1>',
+          'description'=>'You can add Widget Here',
+          ));
+
+      }
+
+      add_action('widgets_init','footersidebar2');
+
+
+      function footersidebar3(){
+          register_sidebar(array(
+
+            'name'=>'Footer Widget 3',
+            'id'=>'footer_sidebar3',
+            'before_widget'=>' ',
+            'after_widget'=>'',
+            'before_title'=>'<h1>',
+            'after_title'=>'</h1>',
+            'description'=>'You can add Widget Here',
+            ));
+
+        }
+
+        add_action('widgets_init','footersidebar3');
   #--------------------------------------------------------------------------
 
 

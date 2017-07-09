@@ -66,10 +66,10 @@
     <!-- Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Superior Collaboration
-                <small>Visualize Quality</small>
+            <h1 class="page-header">RECENT POSTS
+                <small>All Recent Posts</small>
             </h1>
-            <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.</p>
+
         </div>
     </div>
     <!-- /.row -->
