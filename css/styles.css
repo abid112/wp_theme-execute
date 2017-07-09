@@ -1,5 +1,5 @@
 body {
-    padding-top: 0px;
+    padding-top: 50px;
     color: #959595;
 }
 
@@ -40,7 +40,7 @@ h6 {
 .page-intro,
 .article-intro,
 .small-print {
-    text-align: center;
+    text-align:center;
 }
 
 #side-carousel img {

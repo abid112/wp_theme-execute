@@ -79,23 +79,31 @@
 
 
 
-       <?php while(have_posts() ) : the_post();  ?>
     <div class="row">
 
-        <article class="col-md-4 article-intro">
-          
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail();   ?>
+             <div class="col-md-8">
+               <?php while(have_posts() ) : the_post();  ?>
 
-            </a>
-            <h3>
-                <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
-                <h6> published <?php the_time ('M-d-Y'); ?> <?php the_time(); ?> </h6>
-            </h3>
-            <p> <?php the_excerpt(); ?></p>
-        </article>
-        <?php endwhile; ?>
-        <?php  ?>
+          <article class="col-md-6 article-intro">
+
+              <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail();   ?>
+
+              </a>
+              <h3>
+                  <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
+                  <h6> published <?php the_time ('M-d-Y'); ?> <?php the_time(); ?> </h6>
+              </h3>
+              <p> <?php the_excerpt(); ?></p>
+          </article>
+          <?php endwhile; ?>
+        </div>
+             <div class="col-md-4">
+
+                <?php dynamic_sidebar('right_sidebar'); ?>
+
+             </div>
+
 
     </div>
 
