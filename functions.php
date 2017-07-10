@@ -25,12 +25,28 @@ function create_post_type() {
   register_post_type( 'bddata',
     array(
       'labels' => array(
-        'name' => __( 'cpt1s' ),
-        'singular_name' => __( 'cpt1' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-    )
+        'name' => __( 'Movies' ),
+        'singular_name' => __( 'Movie' ),
+        'add_new' => 'Add New',
+                'add_new_item' => 'Add New Movie ',
+                'edit' => 'Edit',
+                'edit_item' => 'Edit Movie ',
+                'new_item' => 'New Movie ',
+                'view' => 'View',
+                'view_item' => 'View Movie Info',
+                'search_items' => 'Search Movie',
+                'not_found' => 'No Movie Reviews found',
+                'not_found_in_trash' => 'No Movie Reviews found in Trash',
+                'parent' => 'Parent Movie Review'
+        ),
+        'public' => true,
+        'has_archive' => true,
+         'menu_position' => 15,
+              'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'custom-fields' ),
+              'taxonomies' => array( '' ),
+              
+              
+      )
   );
 }
 #-----------------------------------------------------------------------
