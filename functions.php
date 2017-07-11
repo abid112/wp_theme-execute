@@ -69,19 +69,21 @@ function cd_meta_box_cb()
     <br>
 
     <label for="my_meta_box_text">Genre:</label>
-    <input type="text" name="my_meta_box_text" id="my_meta_box_text" />
+    <input type="text" name="my_meta_box_text" id="my_meta_box_text2" />
 
     <br>
 
     <label for="my_meta_box_text">Release Year:</label>
-    <input type="text" name="my_meta_box_text" id="my_meta_box_text" />
+    <input type="text" name="my_meta_box_text" id="my_meta_box_text3" />
 
     <br>
 
     <label for="my_meta_box_text">IMDB Link:</label>
-    <input type="text" name="my_meta_box_text" id="my_meta_box_text" />
+    <input type="text" name="my_meta_box_text" id="my_meta_box_text4" />
     <?php    
 }
+
+
 
    add_action( 'save_post', 'cd_meta_box_save' );
 function cd_meta_box_save( $post_id )
@@ -92,7 +94,7 @@ function cd_meta_box_save( $post_id )
     // if our nonce isn't there, or we can't verify it, bail
     if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
      
-    // if our current user can't edit this post, bail
+    // // if our current user can't edit this post, bail
     if( !current_user_can( 'edit_post' ) ) return;
      
     // now we can actually save the data
@@ -105,13 +107,16 @@ function cd_meta_box_save( $post_id )
     // Make sure your data is set before trying to save it
     if( isset( $_POST['my_meta_box_text'] ) )
         update_post_meta( $post_id, 'my_meta_box_text', wp_kses( $_POST['my_meta_box_text'], $allowed ) );
+
+      if( isset( $_POST['my_meta_box_text'] ) )
+        update_post_meta( $post_id, 'my_meta_box_text', wp_kses( $_POST['my_meta_box_text2'], $allowed ) );
+
+      if( isset( $_POST['my_meta_box_text'] ) )
+        update_post_meta( $post_id, 'my_meta_box_text', wp_kses( $_POST['my_meta_box_text3'], $allowed ) );
+      if( isset( $_POST['my_meta_box_text'] ) )
+        update_post_meta( $post_id, 'my_meta_box_text', wp_kses( $_POST['my_meta_box_text4'], $allowed ) );
          
-    if( isset( $_POST['my_meta_box_select'] ) )
-        update_post_meta( $post_id, 'my_meta_box_select', esc_attr( $_POST['my_meta_box_select'] ) );
-         
-    // This is purely my personal preference for saving check-boxes
-    $chk = isset( $_POST['my_meta_box_check'] ) && $_POST['my_meta_box_select'] ? 'on' : 'off';
-    update_post_meta( $post_id, 'my_meta_box_check', $chk );
+    
 }
 
 
@@ -185,6 +190,8 @@ function mysidebar(){
         }
 
         add_action('widgets_init','footersidebar3');
+
+       include( 'cuztom/cuztom.php' );
   #--------------------------------------------------------------------------
 
 
