@@ -84,7 +84,7 @@
                   <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
                   <h6> published <?php the_time ('M-d-Y'); ?> <?php the_time(); ?> </h6>
 
-                  <p style="list-style-type: none;"> <?php the_meta(); ?> </li>  </p> 
+                  <p style="list-style-type: none;"> <?php get_post_meta( get_the_ID(), 'my-meta-box-id', true );?> </li>  </p> 
               </h3>
               <p><b> <?php the_excerpt(); ?></b></p>
           </article>
