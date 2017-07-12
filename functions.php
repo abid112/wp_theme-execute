@@ -191,7 +191,63 @@ function mysidebar(){
 
         add_action('widgets_init','footersidebar3');
 
-       include( 'cuztom/cuztom.php' );
+
+#Making Custom Widget 
+
+        class company_info extends WP_Widget {
+
+    public function __construct() {
+        parent:: __construct('company_info', 'About Information & Copyright', array('description' => 'Add Company name and Info'));
+    }
+
+    public function form($instance) {
+        if ($instance['title']) {
+            echo $title =$instance['title'];
+        } else {
+            $title = "Abid Hasan";
+        }
+        $company = $instance['company'];
+        ?>
+
+        <p>
+            <label for=" ">Company Name:</label>
+        </p>
+        <p>
+            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" id="<?php echo $this->get_field_id('title'); ?>">
+        </p>
+
+        <p>
+            <label for=" ">Copyright Information:</label>
+        </p>
+        <p>
+            <input type="text" name="<?php echo $this->get_field_name('company'); ?>" value="<?php echo $company; ?>" id="<?php echo $this->get_field_id('company'); ?>">
+        </p>
+        
+        
+
+        <?php
+    }
+
+    public function widget($args, $instance) {
+
+        $title = $instance['title'];
+        $company = $instance['company'];
+        echo $args['before_widget'] . $args['before_title'] ."Name:". $title . $args['after_title'] . $args['after_widget'];
+        echo $args['before_widget'] ."Copyright ©:". $company . $args['after_widget'];
+    }
+
+}
+
+add_action('widgets_init', function() {
+    register_widget('company_info');
+});
+
+
+#-----------------------------------------------------------------------------------
+
+
+
+       //include( 'cuztom/cuztom.php' );
   #--------------------------------------------------------------------------
 
 

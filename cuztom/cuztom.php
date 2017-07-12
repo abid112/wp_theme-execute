@@ -11,7 +11,7 @@ function register_cuztom_meta_box()
 add_action( 'init', 'register_cuztom_meta_box' );
 
 $box = register_cuztom_meta_box(
-    'data',
+    'bddata',
     array('post', 'book'),
     array(
         'title'       => __('Data', 'cuztom'),  
