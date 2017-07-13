@@ -49,10 +49,10 @@ function create_post_type() {
       )
   );
 }
-#-----------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------
 
 
-#---------------------------------FOR CUSTOM META BOX-----------------------------------
+#---------------------------------FOR CUSTOM META BOX-------------------------------------------
 add_action( 'add_meta_boxes', 'cd_meta_box_add' );
 function cd_meta_box_add()
 {
@@ -120,10 +120,10 @@ function cd_meta_box_save( $post_id )
 }
 
 
-#-----------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 
 
-#---------------------------------For Widget Area-----------------------
+#----------------------------------------For Widget Area---------------------------------------
 function mysidebar(){
 		register_sidebar(array(
 
@@ -192,7 +192,7 @@ function mysidebar(){
         add_action('widgets_init','footersidebar3');
 
 
-#Making Custom Widget 
+#-------------------------------------Making Custom Widget------------------------------------------ 
 
         class company_info extends WP_Widget {
 
@@ -241,6 +241,44 @@ function mysidebar(){
 add_action('widgets_init', function() {
     register_widget('company_info');
 });
+#-------------------------------------------------------------------------------------------------------
+
+#------------------------------For Shortcode--------------------------------------------------------
+
+
+function wptuts_first_shortcode($atts, $content=null){
+   
+    $post_url = get_permalink(get_the_ID());
+    $post_title = get_the_title(get_the_ID());
+    $tweet = '<a href="http://twitter.com/home/?status=Read ' . $post_title . ' at ' . $post_url . '">Share on Twitter</a>';
+   
+    return $tweet;
+  }
+   
+  add_shortcode('twitter', 'wptuts_first_shortcode');
+
+#---------------------------------------------------------------------------------------------------
+
+
+  #-------------------------------------For Slider(Future)------------------------------------------
+
+  register_post_type('homepageslider', array(
+
+   'labels'=>array(
+      'name'=>'Sliders',
+      'add_new_item'=> 'Add New Slider'
+      ),
+   'public'=> true,
+   'supports'=>array('title', 'thumbnail') ));
+
+  #-----------------------------------------------------------------------------------------------
+
+  
+
+
+
+      
+
 
 
 #-----------------------------------------------------------------------------------
@@ -249,8 +287,6 @@ add_action('widgets_init', function() {
 
        //include( 'cuztom/cuztom.php' );
   #--------------------------------------------------------------------------
-
-
 
 
 ?>
